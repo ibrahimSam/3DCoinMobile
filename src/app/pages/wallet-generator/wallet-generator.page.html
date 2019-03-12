@@ -1,0 +1,8 @@
+<ion-content padding>
+    <img [src]="'../../../assets/logo.png'"/>
+    <ion-input placeholder="Enter Seed" [(ngModel)]="seedValue"></ion-input>
+    <ion-input placeholder="Enter PIN"  [(ngModel)]="pinValue"></ion-input>
+    <ion-button [routerLink]="['page1']" [disabled]="true" >Generate New Wallet</ion-button>
+    <ion-button (click)="doneWGBTNClick(seedValue, pinValue)" >Done</ion-button>
+    <p></p>
+</ion-content>

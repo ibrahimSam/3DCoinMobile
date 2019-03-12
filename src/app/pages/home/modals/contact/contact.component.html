@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>3DCoin wallet</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-text>Our web sites : </ion-text>
+
+  <ion-item color="primary" (click)="open3dcoin()">
+    <ion-label>
+      www.3dcoin.io
+    </ion-label>
+  </ion-item>
+  <ion-item color="primary" (click)="openDistricts()">
+    <ion-label text-justify>
+      www.Districts.io
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-textarea
+      placeholder="Direct contact with devlopers ..."
+    ></ion-textarea>
+  </ion-item>
+  <ion-button (click)="sendMSG()">Send</ion-button>
+</ion-content>

@@ -1,0 +1,8 @@
+<ion-content padding>
+  <img [src]="'../../../assets/logo.png'"/>
+  <ion-label placeholder="Your seed must be in 13 number and letter"></ion-label>
+  <ion-input placeholder="Enter Seed" [(ngModel)]="seedValue" ></ion-input>
+  <ion-input placeholder="Enter Tel" [(ngModel)]="telNumber"></ion-input>
+  <ion-input placeholder="Enter Email"></ion-input>
+  <ion-button (click)="doneWGBTNClick(seedValue, telNumber)" >Done</ion-button>
+</ion-content>

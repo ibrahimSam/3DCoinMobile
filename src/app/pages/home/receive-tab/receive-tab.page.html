@@ -1,0 +1,28 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="'/home'">
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>3DCoin wallet</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-infinite-scroll>
+      <ion-select   [(ngModel)]="selectedPubKey" placeholder="public keys list " (ionChange)="onChange()">
+          <ion-select-option *ngFor="let pubkey of pubkeyList">{{
+            pubkey
+          }}</ion-select-option>
+        </ion-select>
+  </ion-infinite-scroll>
+  <!-- (ionChange)="onChange()"     [(ngModel)]="selectedPubKey"-->
+
+  <ion-item lines="none" style="margin: 50px;">
+    <qrcode [qrdata]="_3dcAddressQrCode" [size]="200" [level]="'M'"></qrcode>
+  </ion-item>
+  <ion-button (click)="generateNewPubKey()" style="margin: 30px;">
+    Generate
+  </ion-button>
+</ion-content>

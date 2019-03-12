@@ -1,0 +1,16 @@
+.show {
+  --background: none transparent;
+}
+
+.hide {
+  --background: #ffffff;
+  //background-color: #ffffff;
+}
+
+.divshow {
+  display: block;
+}
+
+.divhide {
+  display: none;
+}

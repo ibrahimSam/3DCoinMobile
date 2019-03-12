@@ -1,0 +1,31 @@
+<ion-header> 
+  <ion-toolbar>
+    <!-- [routerLink]="home"  (click)="navtoHome() -->
+    <ion-button #skipBTN slot="end" [routerLink]="'/wallet-generator'" >{{Skip}}</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides #slider class="ionslides" pager="true" [options]="{autoHeight: true}" (ionSlideDidChange)="ionSlideDidChange()">
+    <ion-slide>
+      <ion-item>
+        Loremipsum dolorsitamet,consectetueradipiscing elit, seddiam
+        nonummynibheuismodtincidunt ut lao- reetdolore magna aliquamerat
+        volutpat.Ut wisienim adminimveniam,quis nostrud exerci tation
+        ullamcorper suscipitlobortisnisl ut aliquipex eacommodo conse-
+        quat.Duisautem veleumiriure dolorinhendrerit in vul- putatevelit esse
+        molestieconsequat
+      </ion-item>
+    </ion-slide>
+
+    <ion-slide>
+        Loremipsum dolorsitamet,consectetueradipiscing elit, seddiam
+        nonummynibheuismodtincidunt ut lao- reetdolore magna aliquamerat
+        volutpat.Ut wisienim adminimveniam,quis nostrud exerci tation
+        ullamcorper suscipitlobortisnisl ut aliquipex eacommodo conse-
+        quat.Duisautem veleumiriure dolorinhendrerit in vul- putatevelit esse
+        molestieconsequat
+        quat.
+    </ion-slide>
+  </ion-slides>
+</ion-content>

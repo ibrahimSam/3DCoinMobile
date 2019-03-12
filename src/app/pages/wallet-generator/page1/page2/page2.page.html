@@ -1,0 +1,10 @@
+<ion-content padding>
+  <img [src]="'../../../assets/logo.png'"/>
+  <p></p>
+  <ion-text> Sms will be send to you for confirmation </ion-text> 
+  <p></p>
+  <ion-text> +213 {{telNumber}} </ion-text> 
+  <p></p>
+  <ion-input placeholder="Enter your code" [(ngModel)]="confirmationCode" ></ion-input>
+  <ion-button (click)="doneWGBTNClick(confirmationCode)" >Done</ion-button>
+</ion-content>

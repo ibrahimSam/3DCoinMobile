@@ -1,0 +1,9 @@
+<ion-content padding>
+  <img [src]="'../../../assets/logo.png'"/>
+  <ion-textarea>Your wallet will be encrypted by this Pin</ion-textarea>
+  <ion-input placeholder="Enter your Pin" [(ngModel)]="pinVal" ></ion-input>
+  <ion-input placeholder="Confirm your Pin" [(ngModel)]="confPinVal"></ion-input>
+  <ion-button (click)="empreintBTNClick()" >Empreint</ion-button>
+  <p></p>
+  <ion-button (click)="doneWGBTNClick(pinVal, confPinVal)" >Done</ion-button>
+</ion-content>

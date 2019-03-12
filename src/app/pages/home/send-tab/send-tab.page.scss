@@ -1,0 +1,21 @@
+.item-content {
+  background-color: #ffffff;
+  z-index: 2;
+  width: 100%;
+}
+
+.show {
+  --background: none transparent !important;
+}
+
+.hide {
+  background-color: #ffffff !important;
+}
+
+.divshow {
+  display: block !important;
+}
+
+.divhide {
+  display: none !important;
+}

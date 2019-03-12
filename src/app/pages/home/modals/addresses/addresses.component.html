@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>addresses</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--   <ion-list>
+    <ion-item
+      *ngFor="let address of adressesList; let i = index"
+      (click)="itemClicked(i)"
+    >
+      {{ address.index }}
+      {{ address.address | slice: 0:25 }}
+      {{ address.amount }}
+    </ion-item>
+  </ion-list> -->
+
+  <!--   <ion-list>
+    <ion-item *ngFor="let address of adressesList; let i = index">
+      <ion-text style="padding-right: 5px;">{{ address.index }}   </ion-text>
+      <ion-text style="padding-right: 5px;">{{ address.address | slice: 0:20 }}</ion-text>
+      <ion-text> {{ address.amount }}3dc</ion-text>
+      <ion-checkbox style="padding-right: 0px;" slot="start" [(ngModel)]="address.isChecked" value="1"></ion-checkbox>
+    </ion-item>
+  </ion-list> -->
+
+  <ion-grid item-content>
+    <ion-row *ngFor="let address of adressesList; let i = index">
+      <ion-col>
+        <ion-checkbox [(ngModel)]="address.isChecked"></ion-checkbox>
+        <ion-text style="padding: 5px;">{{ address.index }}</ion-text>
+        <ion-text>{{ address.address | slice: 0:10 }}</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>{{ address.amount | number : ".1-3" }} 3dc</ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

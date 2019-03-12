@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="'/home'">
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      {{ _3dctitle }} : {{ totalBalance | number: ".1-5" }} 3dc</ion-title
+    >
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [ngClass]="state == 'show' ? 'show' : 'hide'">
+  <div [ngClass]="divstate == 'divshow' ? 'divshow' : 'divhide'">
+    <ion-item>
+      <div class="item-content">
+        <!--       <p [(ngModel)]="text__">
+        {{ text__ }}
+      </p> -->
+        <!--         <p>
+          {{ amountToSend }}
+        </p> -->
+
+        <p ngDefaultControl [(ngModel)]="fees">fees : {{ fees }}</p>
+
+        <ion-button (click)="scanqr()">scan</ion-button>
+        <ion-input
+          type="text"
+          placeholder="Receiver address "
+          [(ngModel)]="receiverAddress"
+        ></ion-input>
+        <ion-input
+          type="number"
+          placeholder="Amount"
+          [(ngModel)]="amountToSend"
+        ></ion-input>
+      </div>
+    </ion-item>
+    <ion-button (click)="sendTX()">Send</ion-button>
+  </div>
+</ion-content>

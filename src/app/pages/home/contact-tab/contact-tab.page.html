@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="'/home'">
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>3DCoin wallet</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [ngClass]="state == 'show' ? 'show' : 'hide'">
+  <div [ngClass]="divstate == 'divshow' ? 'divshow' : 'divhide'">
+    <ion-searchbar
+      animated
+      showCancelButton
+      cancelButtonText="Custom Cancel"
+    ></ion-searchbar>
+
+    <ion-button (click)="showFP()">finger print test</ion-button>
+    <p ngDefaultControl [(ngModel)]="_result">
+      {{ _result }}
+    </p>
+
+    <ion-button expand="block" fill="outline" (click)="scanqr()">
+      <ion-icon slot="start" name="person"></ion-icon>
+      Add new person
+    </ion-button>
+
+    <ion-item *ngIf="show" lines="none">
+      <ion-list class="my-ion-list">
+        <ion-item *ngFor="let person of people">
+          <ion-buttons slot="start" (click)="remove(person)">
+            <ion-button>
+              <ion-icon name="trash"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-icon slot="start" name="person"></ion-icon>
+          {{ person.label }}
+          <ion-button (click)="send(person)" slot="end">Send</ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-item>
+  </div>
+</ion-content>
